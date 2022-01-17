@@ -70,9 +70,9 @@ namespace Member_Mgt
                 try
                 {
                     string id = controls[0].Text;
-                    if (id == "") throw new Exception("아이디를 입력해주세요.");
+                    if (id.Trim() == "") throw new Exception("아이디를 입력해주세요.");
                     string nm = controls[1].Text;
-                    if (nm == "") throw new Exception("이름을 입력해주세요.");
+                    if (nm.Trim() == "") throw new Exception("이름을 입력해주세요.");
                     string gen;
                     if (((RadioButton)controls[2]).Checked) gen = controls[2].Text;
                     else gen = controls[3].Text;
